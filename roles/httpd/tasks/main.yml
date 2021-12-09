@@ -1,8 +1,13 @@
----
-# tasks file for Install_httpd
+- name: install httpd for CentOs
+dnf:
+  name: httpd
+  state: latest
+  update_cache: yes
+when: ansible_distribution == "CentOs"
 
-  - name: Install httpd or apache
-    package:
-      name: "{{ apache_package }}
-      state: latest
-      update_cache: yes
+- name: install httpd for Ubuntu
+dnf:
+  name: httpd
+  state: latest
+  update_cache: yes
+when: ansible_distribution == "Ubuntu"
