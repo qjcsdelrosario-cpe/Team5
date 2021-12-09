@@ -1,5 +1,6 @@
 ---
-- hosts: Aseo
+- hosts: all
   become: true
   roles:
     - vsftpd
+
