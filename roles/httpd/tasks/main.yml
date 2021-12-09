@@ -1,1 +1,13 @@
-- name:
+- name: install httpd for CentOs
+dnf:
+  name: httpd
+  state: latest
+  update_cache: yes
+when: ansible_distribution == "CentOs"
+
+- name: install httpd for Ubuntu
+dnf:
+  name: httpd
+  state: latest
+  update_cache: yes
+when: ansible_distribution == "Ubuntu"
