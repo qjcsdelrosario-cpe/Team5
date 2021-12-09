@@ -1,0 +1,15 @@
+- name: Installing Samba in Ubuntu
+  apt:
+    name: 
+      - samba
+    state: latest
+    update_cache: yes
+  when : ansible_distribution == "Ubuntu"
+
+- name: Installing Samba in CentOS
+  dnf:
+    name: 
+      - samba
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == "CentOS"
