@@ -1,7 +1,6 @@
 - name: Install bind9 Ubuntu
   apt:
-          name:
-                  - bind9
+          name: bind9
           state: latest
           update_cache: yes
    when: ansible_distribution == "Ubuntu"
