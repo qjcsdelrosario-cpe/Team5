@@ -12,4 +12,4 @@
       - vsftpd
     state: latest
     update_cache: yes
-  when: ansile_distribution == "CentOS"
+  when: ansible_distribution == "CentOS"
